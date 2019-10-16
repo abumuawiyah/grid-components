@@ -5,12 +5,13 @@ const StyledGrid = styled.div`
   display: ${p => (p.display ? p.display : "grid")};
 
   -ms-grid-columns: ${p =>
+    p.gridTemplateColumns &&
     p.gridTemplateColumns.split(" ").join(` ${p.gridColumnGap} `)};
   grid-template-columns: ${p => p.gridTemplateColumns && p.gridTemplateColumns};
 
   -ms-grid-rows: ${p =>
+    p.gridTemplateRows &&
     p.gridTemplateRows.split(" ").join(` ${p.gridRowGap} `)};
-  -ms-grid-rows: 25% ${p => p.gridRowGap} 100px ${p => p.gridRowGap} auto;
   grid-template-rows: ${p => p.gridTemplateRows && p.gridTemplateRows};
 
   grid-template-areas: ${p => p.gridTemplateAreas && p.gridTemplateAreas};

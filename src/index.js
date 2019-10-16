@@ -1,26 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
-
-import "./styles.css";
-
-const StyledButton = styled.button`
-  background: red;
-  color: white;
-`;
+import Grid from "./Grid";
+import GridItem from "./GridItem";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <StyledButton
-        css={`
-          margin: 10px;
-        `}
-      >
-        Button 123
-      </StyledButton>
+      <Grid gridTemplateColumns={"1fr 1fr"}>
+        <GridItem>Item 1</GridItem>
+        <GridItem>Item 2</GridItem>
+        <GridItem>Item 3</GridItem>
+      </Grid>
     </div>
   );
 }

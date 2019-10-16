@@ -1,5 +1,8 @@
-import styled from "styled-components";
+import React from "react";
+import { StyledGridItem } from "./GridItem-styled";
 
-const StyledGridItem = styled.div``;
+function GridItem({ children, ...others }) {
+  return <StyledGridItem {...others}>{children}</StyledGridItem>;
+}
 
-export { StyledGridItem };
+export default GridItem;
